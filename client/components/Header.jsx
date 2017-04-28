@@ -13,7 +13,9 @@ import './Header.sass';
 export default class Header extends React.Component {
     componentWillMount() {
         var tempThis = this;
+        console.log('component wil mount');
         singIn(function(data) {
+            console.log('data header', data);
             tempThis.props.dispatch(singInTwitter(data));
         });
     }

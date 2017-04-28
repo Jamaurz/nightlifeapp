@@ -18137,7 +18137,9 @@ var Header = (_dec = (0, _reactRedux.connect)(function (store) {
         key: "componentWillMount",
         value: function componentWillMount() {
             var tempThis = this;
+            console.log('component wil mount');
             (0, _commonActions.singIn)(function (data) {
+                console.log('data header', data);
                 tempThis.props.dispatch((0, _commonActions.singInTwitter)(data));
             });
         }
